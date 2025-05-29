@@ -11,6 +11,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        // Design system colors from DESIGN_GUIDELINES.md
+        primary: "#FF7A59",
+        secondary: "#1F2937", 
+        accent: "#FFFFFF",
+        muted: "#F5F5F5",
+        error: "#DC2626",
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
