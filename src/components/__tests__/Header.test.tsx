@@ -37,11 +37,12 @@ describe('Header', () => {
     expect(getStartedLink).toHaveAttribute('href', '/auth');
   });
 
-  it('applies correct styling classes for design system', () => {
+  it('applies correct styling classes for current design system', () => {
     render(<Header />);
     const header = screen.getByRole('banner');
     
-    // Should have proper background and spacing classes
-    expect(header).toHaveClass('bg-secondary');
+    // Should have gradient background classes instead of old bg-secondary
+    expect(header).toHaveClass('bg-gradient-to-r');
+    expect(header).toHaveClass('backdrop-blur-sm');
   });
 }); 
