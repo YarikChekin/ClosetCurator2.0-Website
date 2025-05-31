@@ -44,6 +44,6 @@ describe('Footer', () => {
     const footer = screen.getByRole('contentinfo');
     
     // Should have proper background color from design system
-    expect(footer).toHaveClass('bg-secondary');
+    expect(footer).toHaveClass('bg-accent');
   });
 }); 

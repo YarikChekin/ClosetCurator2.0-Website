@@ -13,24 +13,28 @@ describe('Header', () => {
     
     // Check for main navigation links
     const homeLink = screen.getByRole('link', { name: /home/i });
+    const howItWorksLink = screen.getByRole('link', { name: /how it works/i });
     const featuresLink = screen.getByRole('link', { name: /features/i });
-    const signInLink = screen.getByRole('link', { name: /sign in/i });
+    const getStartedLink = screen.getByRole('link', { name: /get started/i });
     
     expect(homeLink).toBeInTheDocument();
+    expect(howItWorksLink).toBeInTheDocument();
     expect(featuresLink).toBeInTheDocument();
-    expect(signInLink).toBeInTheDocument();
+    expect(getStartedLink).toBeInTheDocument();
   });
 
   it('has correct href attributes for navigation links', () => {
     render(<Header />);
     
     const homeLink = screen.getByRole('link', { name: /home/i });
+    const howItWorksLink = screen.getByRole('link', { name: /how it works/i });
     const featuresLink = screen.getByRole('link', { name: /features/i });
-    const signInLink = screen.getByRole('link', { name: /sign in/i });
+    const getStartedLink = screen.getByRole('link', { name: /get started/i });
     
     expect(homeLink).toHaveAttribute('href', '/');
+    expect(howItWorksLink).toHaveAttribute('href', '#how-it-works');
     expect(featuresLink).toHaveAttribute('href', '#features');
-    expect(signInLink).toHaveAttribute('href', '/auth');
+    expect(getStartedLink).toHaveAttribute('href', '/auth');
   });
 
   it('applies correct styling classes for design system', () => {
@@ -38,6 +42,6 @@ describe('Header', () => {
     const header = screen.getByRole('banner');
     
     // Should have proper background and spacing classes
-    expect(header).toHaveClass('bg-accent');
+    expect(header).toHaveClass('bg-secondary');
   });
 }); 

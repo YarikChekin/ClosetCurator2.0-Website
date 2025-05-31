@@ -2,22 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Refined Theme - Professional yet Playful */
 :root {
-  --background: #ffffff;
+  --background: #FAFBFC;    /* Very light off-white */
   --foreground: #171717;
+  
+  /* New Color Palette */
+  --primary: #8B7CF6;      /* Soft purple */
+  --primary-light: #A78BFA; /* Light purple for accents */
+  --primary-dark: #6D28D9;  /* Deeper purple for contrast */
+  --secondary: #FFFFFF;     /* Clean white */
+  --accent: #1F2937;        /* Dark gray for text */
+  --accent-light: #6B7280;  /* Light gray for secondary text */
+  --muted: #F8FAFC;         /* Very light gray background */
+  --muted-purple: #F3F4F6;  /* Light purple-gray sections */
+  --cta: #8B7CF6;           /* Same as primary for consistency */
+  --success: #10B981;       /* Green for success states */
+  --error: #EF4444;         /* Red for errors */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Force light theme - remove dark mode override for now */
+/* We'll add dark mode later if needed */
 
 body {
-  color: var(--foreground);
+  color: var(--accent);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+}
+
+/* Typography Improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--accent);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @layer utilities {

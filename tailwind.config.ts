@@ -11,15 +11,27 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        // Design system colors from DESIGN_GUIDELINES.md
-        primary: "#FF7A59",
-        secondary: "#1F2937", 
-        accent: "#FFFFFF",
-        muted: "#F5F5F5",
-        error: "#DC2626",
+        // Refined color system
+        primary: {
+          DEFAULT: "var(--primary)",
+          light: "var(--primary-light)",
+          dark: "var(--primary-dark)",
+        },
+        secondary: "var(--secondary)",
+        accent: {
+          DEFAULT: "var(--accent)",
+          light: "var(--accent-light)",
+        },
+        muted: {
+          DEFAULT: "var(--muted)",
+          purple: "var(--muted-purple)",
+        },
+        cta: "var(--cta)",
+        success: "var(--success)",
+        error: "var(--error)",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'sans-serif'],
       },
     },
   },

@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="bg-accent shadow-sm" role="banner">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between py-4">
+    <header className="bg-gradient-to-r from-primary/2 via-white to-primary-light/2 backdrop-blur-sm border-b border-primary/5" role="banner">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-secondary">
+            <Link href="/" className="text-2xl font-bold text-gradient">
               Closet Curator
             </Link>
           </div>
@@ -16,29 +16,35 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               href="/" 
-              className="text-secondary hover:text-primary transition-colors duration-150"
+              className="text-accent hover:text-primary transition-colors duration-200"
             >
               Home
             </Link>
             <Link 
+              href="#how-it-works" 
+              className="text-accent hover:text-primary transition-colors duration-200"
+            >
+              How it works
+            </Link>
+            <Link 
               href="#features" 
-              className="text-secondary hover:text-primary transition-colors duration-150"
+              className="text-accent hover:text-primary transition-colors duration-200"
             >
               Features
             </Link>
             <Link 
               href="/auth" 
-              className="bg-primary text-accent px-4 py-2 rounded-lg font-semibold hover:scale-105 transition-transform duration-150"
+              className="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary-dark transition-colors duration-200"
             >
-              Sign In
+              Get Started
             </Link>
           </nav>
           
-          {/* Mobile menu button - for future implementation */}
+          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               type="button"
-              className="text-secondary hover:text-primary"
+              className="text-accent hover:text-primary p-2"
               aria-label="Open mobile menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
