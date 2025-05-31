@@ -24,6 +24,10 @@
 /* Force light theme - remove dark mode override for now */
 /* We'll add dark mode later if needed */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--accent);
   background: var(--background);
